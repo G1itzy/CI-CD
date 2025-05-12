@@ -8,7 +8,7 @@ using namespace std;
 #define ppn 0.10//PPN = 10%
 const int diskon = 20000;
 
-int main(){
+int (){
 	char nama[50], menu[20], back;
 	int jumlah, makanan, makan, total, bayar, kurang, bonus, pajak, kembalian,
 		harga[9]={4000, 8000, 10000, 13000, 14000, 15000, 19000, 22000, 25000}, i=0;
