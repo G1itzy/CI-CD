@@ -1,9 +1,13 @@
-name: CI Pipeline
+name: C++ CI/CD Pipeline
 
-on: [push, pull_request]
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
 
 jobs:
-  build-and-run:
+  build-and-test:
     runs-on: ubuntu-latest
     
     steps:
@@ -15,8 +19,8 @@ jobs:
         sudo apt-get update
         sudo apt-get install -y g++
         
-    - name: Compile program
-      run: g++ "Quis Kasir.cpp" -o kasir
+    - name: Compile Quis Kasir
+      run: g++ "D:/KULIAH INFORMATIKA/Kuliah Semester 6/PROYEK PEMEROGRAMAN/CI-CD/Quis Kasir.cpp" -o quis-kasir
       
-    - name: Run program
-      run: ./kasir
+    - name: Run Program
+      run: ./quis-kasir
